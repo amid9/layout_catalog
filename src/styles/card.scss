@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 .card {
-  transition: transform 300ms;
+  transition: transform $transition-time ;
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
@@ -30,7 +30,7 @@
     font-size: 12px;
     line-height: 18px;
     margin: 0 0 4px;
-    transition: color 300ms;
+    transition: color $transition-time;
   }
   &__code {
     font-weight: 400;
@@ -85,9 +85,7 @@
 
     box-sizing: border-box;
     border: 1px solid transparent;
-    transition:
-      background-color 300ms,
-      color 300ms;
+    transition: background-color $transition-time, color $transition-time;
 
     &:hover {
       background-color: $color-white;

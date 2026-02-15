@@ -7,7 +7,7 @@ html {
   font-family: Roboto, sans-serif;
 }
 
-h1,
+h2,
 p {
   margin: 0;
 }
@@ -47,16 +47,17 @@ p {
 }
 
 .header__link {
-  color: black;
+  color: $color-main;
   display: flex;
   align-items: center;
   height: var(--header-height);
   text-transform: uppercase;
   text-decoration: none;
+  transition: color 300ms;
 }
 
 .header__link:hover {
-  color: var(--blue-color);
+  color: $color-accent;
 }
 
 .header__link.is-active {

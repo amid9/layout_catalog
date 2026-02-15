@@ -1,6 +1,7 @@
 @use 'variables' as *;
 
 .card {
+  transition: transform 300ms;
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
@@ -29,6 +30,7 @@
     font-size: 12px;
     line-height: 18px;
     margin: 0 0 4px;
+    transition: color 300ms;
   }
   &__code {
     font-weight: 400;
@@ -83,11 +85,18 @@
 
     box-sizing: border-box;
     border: 1px solid transparent;
+    transition:
+      background-color 300ms,
+      color 300ms;
 
     &:hover {
-      background-color: $color-main;
+      background-color: $color-white;
       border-color: $color-accent;
       color: $color-accent;
+      transform: scale(1.2);
+    }
+    &:hover .card__title {
+      color: $color-title-hover;
     }
   }
 }
